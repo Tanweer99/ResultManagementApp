@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main class="container mt-5">
+    <div class="row  justify-content-end">
+        <button class="btn btn-info">
+            <a href="/teacher/add" class="text-light">Add Student</a>
+        </button>
+    </div>
+    <div class="mt-5 px-3">
+        <h4 >Total <%- students.length%> Students</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Roll</th>
+                    <th scope="col">Name</th>       
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%  students.forEach(element => { %>
+                    <tr>
+                        <td><%= element.roll %></td>
+                        <td><%= element.name %></td>               
+                        <td><%= element.dob %></td>
+                        <td><%= element.score %></td> 
+                        <td>
+                            <a href="/teacher/update/<%= element._id %> "><img style="margin: 0px 5px;" src="https://img.icons8.com/material-outlined/30/000000/edit.png"/></a>
+                            <a href="/teacher/delete/<%= element._id %> "><img style="margin: 0px 5px;" src="https://img.icons8.com/ios-glyphs/30/000000/filled-trash.png"/></a>
+                        </td>
+                    </tr>
+                <%}) %>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

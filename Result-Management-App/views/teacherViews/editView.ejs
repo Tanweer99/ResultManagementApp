@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main class="container  mt-5">
+    <div class="mb-3">
+        <a href="/teacher/view" class="btn btn-info" style="margin-top:5px;">Back</a>
+    </div>
+    <h4>Editing Form for Student : <%= student.name %> </h4>
+    <form method="POST" autocomplete="off">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name : </label>
+          <input type="text" name="name" required class="form-control" value=" <%= student.name  %> " id="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="roll" class="form-label">Roll : </label>
+            <input type="number" name="roll" required  class="form-control" value="<%= student.roll %>" id="roll" >
+        </div>     
+         
+        <div class="mb-3">
+          <label for="dob" class="form-label">Date of Birth : </label>
+          <input type="datetime" name="dob"  class="form-control" value="<%= student.dob %>" id="dob">
+        </div>
+
+        <div class="mb-3">
+          <label for="score" class="form-label">Score : </label>
+          <input type="number" name="score" required class="form-control" value="<%= student.score %>"  id="score">
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</main>
+
+</body>
+</html>

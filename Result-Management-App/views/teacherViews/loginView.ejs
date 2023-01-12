@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <div class="container w-auto">
+      <a class="navbar-brand " href="/">Result Management System</a>     
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+    <div class="my-3">
+        <a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+    </div>
+    <div class=" text-center text-danger">
+        <% if(error.length > 0){ %>
+           <h4> <%- error %> </h4>
+        <% } %>
+    </div>
+    <h3 class="text-center">Teacher Login</h3>
+    <div class=" d-flex justify-content-center align-items-center">
+      <form method="POST" class=" w-75">
+        <div class="mb-3">
+          <label for="pass" class="form-label">Password : </label>
+          <input type="password" name="password"  class="form-control" id="pass">
+          <br>
+          <input type="checkbox" style="width: 30px;" onclick="myFunction()">Show Password
+          <br>
+        </div>
+        <a><button type="submit" class="btn btn-primary">Submit</button></a>
+      </form>
+    </div>
+    <script>
+      function myFunction() {
+      var x = document.getElementById("pass");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+</main>
+
+</body>
+</html>

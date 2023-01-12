@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <div class="container w-auto">
+      <a class="navbar-brand " href="/">Result Management System</a>     
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="row jumbotron mt-5">
+    <div class="col-md-12">
+        <p class="text-center"><strong>Login as</strong></p>
+    </div>
+    <div class=" col-md-12 text-center">
+        <button  type="button" class="btn btn-info mr-3">
+            <a href="/teacher/login" class="text-light">Teacher</a>
+        </button>
+
+        <button  type="button" class="btn btn-info ml-3">
+            <a href="/student/login" class="text-light">Student</a>
+        </button>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "result-management-app",
+  "version": "1.0.0",
+  "description": "Node Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MD Alam",
+  "license": "ISC",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "body-parser": "^1.19.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.8"
+  }
+}

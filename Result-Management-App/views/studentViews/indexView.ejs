@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main class="container my-5">
+    <h4>My Result</h4>
+    <div class="stuTable">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                <th scope="col">Roll no.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of birth</th>
+                <th scope="col">Score</th>
+              </tr>
+          </thead>
+          <tbody>        
+              <tr>
+                <td><%= student.roll %> </td>
+                <td><%= student.name %> </td>
+                <td><%= student.dob %> </td>
+                <td><%= student.score %> </td>
+              </tr>
+              
+          </tbody>
+      </table>    
+    </div>
+</main>
+
+</body>
+</html>
